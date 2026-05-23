@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="hero">
+        <h1>📄 HTML · 🎨 CSS · ⚡ JavaScript</h1>
+        <p>Три столпа фронтенда: их уникальные функции и возможности</p>
+    </div>
+
+    <!-- карточки с перечислением основных функций -->
+    <div class="grid">
+        <!-- HTML карточка -->
+        <div class="card html">
+            <h2> HTML</h2>
+            <p style="margin-bottom: 0.5rem;"><strong>Основа</strong> — структура документа.</p>
+            <ul class="func-list">
+                <li>Создание семантической сетки (&lt;header&gt;, &lt;article&gt;, &lt;section&gt;)</li>
+                <li>Формы и поля ввода (интерактив без JS)</li>
+                <li>Встраивание мультимедиа &lt;video&gt;, &lt;audio&gt;, &lt;canvas&gt;</li>
+                <li>Гиперссылки и навигация по сайту</li>
+                <li>Атрибуты для доступности (ARIA, alt)</li>
+                <li>Загрузка ресурсов: картинки, шрифты, стили</li>
+            </ul>
+            <div class="code-snip">
+                &lt;!-- Пример структуры --&gt;<br>
+                &lt;article class="card"&gt;<br>
+                &nbsp;&nbsp;&lt;h3&gt;Заголовок&lt;/h3&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Текст абзаца&lt;/p&gt;<br>
+                &lt;/article&gt;
+            </div>
+        </div>
+
+        <!-- CSS карточка -->
+        <div class="card css">
+            <h2> CSS</h2>
+            <p><strong>Визуал</strong> — внешний вид и анимация.</p>
+            <ul class="func-list">
+                <li>Точное позиционирование (Flexbox, Grid, absolute)</li>
+                <li>Адаптивный дизайн (media queries)</li>
+                <li>Анимации и переходы (@keyframes, transition)</li>
+                <li>Трансформации (scale, rotate, translate)</li>
+                <li>Тени, градиенты, фильтры, переменные (custom properties)</li>
+                <li>Псевдоклассы (:hover, :focus) и псевдоэлементы (::before)</li>
+            </ul>
+            <div class="code-snip">
+                .button {<br>
+                &nbsp;&nbsp;background: linear-gradient(45deg, gold, orange);<br>
+                &nbsp;&nbsp;transition: transform 0.2s;<br>
+                }<br>
+                .button:hover { transform: scale(1.05); }
+            </div>
+        </div>
+
+        <!-- JavaScript карточка -->
+        <div class="card js">
+            <h2> JavaScript</h2>
+            <p><strong>Функциональность</strong> — интерактив и логика.</p>
+            <ul class="func-list">
+                <li>Манипуляция DOM: создание, удаление элементов</li>
+                <li>Обработка событий (клик, ввод, загрузка)</li>
+                <li>Асинхронность: fetch, async/await, таймеры</li>
+                <li>Хранение данных: localStorage, cookies</li>
+                <li>Работа с массивами, объектами, функциями высшего порядка</li>
+                <li>Валидация форм и динамическая подгрузка контента</li>
+            </ul>
+            <div class="code-snip">
+                // изменить текст элемента<br>
+                const title = document.querySelector('h1');<br>
+                title.textContent = 'Привет, мир!';<br>
+                // слушатель клика<br>
+                button.addEventListener('click', () => { ... });
+            </div>
+        </div>
+    </div>
+
+    <!-- ИНТЕРАКТИВНАЯ ЗОНА: ДЕМОНСТРАЦИЯ ФУНКЦИЙ HTML+CSS+JS В ДЕЙСТВИИ -->
+    <div class="playzone">
+        <h3> Примеры: JavaScript + HTML + CSS</h3>
+        <p style="margin-bottom: 1rem;">Нажми, введи текст — увидишь, как языки работают в связке. Все элементы ниже созданы HTML, стилизованы CSS, а логику обеспечивает JavaScript.</p>
+        <div class="js-demo-panel">
+            <!-- Счётчик -->
+            <div class="js-card">
+                <h4> Функция: счётчик кликов</h4>
+                <p>Демонстрация переменных, событий и обновления DOM</p>
+                <div class="counter-box">
+                    <span id="counterValue" style="font-size: 2rem; font-weight: bold;">0</span>
+                    <div style="display: flex; gap: 10px;">
+                        <button id="incBtn"> Увеличить</button>
+                        <button id="resetCounter"> Сброс</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Изменение цвета (манипуляция стилями) -->
+            <div class="js-card">
+                <h4>Функция: смена цвета</h4>
+                <p>CSS-стили + JS</p>
+                <div class="color-box">
+                    <div id="colorBlock" class="color-preview" style="background: #3b82f6;"></div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button id="redBtn" style="background:#ef4444;">Красный</button>
+                        <button id="blueBtn" style="background:#3b82f6;">Синий</button>
+                        <button id="greenBtn" style="background:#10b981;">Зелёный</button>
+                        <button id="randomBtn"> Случайный</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ToDo: работа с массивом и динамическим списком -->
+            <div class="js-card">
+                <h4> Функция: список дел </h4>
+                <p>Добавление, удаление элементов</p>
+                <div class="todo-input-area">
+                    <input type="text" id="todoInput" placeholder="Написать функцию..." style="width: 100%;">
+                    <button id="addTodoBtn"> Добавить задачу</button>
+                </div>
+                <ul id="todoList" class="todo-list">
+                    <li> Изучить HTML структуру <button class="del-btn" data-todo="0">✔</button></li>
+                    <li> Поэкспериментировать с CSS <button class="del-btn" data-todo="1">✔</button></li>
+                    <li> Написать JS-функции <button class="del-btn" data-todo="2">✔</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- дополнительная секция про fetch / локальное время (AJAX имитация) -->
+        <hr>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; align-items: center;">
+            <div>
+                <h4>Функция: часы</h4>
+                <p id="liveClock" style="font-size: 1.6rem; font-family: monospace; background:#00000055; display:inline-block; padding: 5px 15px; border-radius: 60px;">--:--:--</p>
+                <button id="toggleClockBtn">⏸ Приостановить часы</button>
+            </div>
+            <div>
+                <h4> Функция локального хранилища </h4>
+                <p>Сохраним последний цвет блока и счётчик?</p>
+                <button id="saveStateBtn"> Сохранить состояние</button>
+                <button id="loadStateBtn"> Загрузить состояние</button>
+                <p id="storageMsg" style="font-size: 0.7rem; margin-top: 5px;"> После загрузки цвет блока и счётчик восстановятся</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+         HTML создаёт скелет, CSS — внешность, JS — функциональность веб-страницы. Каждый язык выполняет свои уникальные функции.
+    </footer>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Fira Code', monospace, system-ui, sans-serif;
+            background: linear-gradient(145deg, #f5f7fc 0%, #e9eef4 100%);
+            color: #1a2c3e;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+        }
+
+        /* контейнер сетки */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* шапка */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #e34c26, #2965f1, #f7df1e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #2c4c6e;
+            max-width: 800px;
+            margin: 0 auto;
+            border-bottom: 2px dashed #b9d0e7;
+            display: inline-block;
+            padding-bottom: 0.4rem;
+        }
+
+        /* карточки */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 3rem 0 2rem;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 280px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(0px);
+            border-radius: 2rem;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            border: 1px solid rgba(255,255,240,0.6);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 40px -15px rgba(0, 0, 0, 0.2);
+            background: white;
+        }
+
+        .card h2 {
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 5px solid;
+            padding-left: 1rem;
+        }
+
+        .html h2 { border-color: #e44d26; color: #e44d26; }
+        .css h2 { border-color: #264de4; color: #264de4; }
+        .js h2 { border-color: #f7df1e; color: #e6b91e; text-shadow: 0 1px 0 #00000010;}
+
+        .func-list {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+
+        .func-list li {
+            margin: 0.8rem 0;
+            padding-left: 1.6rem;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .func-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #2c7da0;
+            font-weight: bold;
+        }
+
+        .code-snip {
+            background: #1e2a36;
+            color: #e2f0fa;
+            padding: 0.8rem;
+            border-radius: 16px;
+            font-family: 'Fira Code', 'Cascadia Code', monospace;
+            font-size: 0.8rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        /* интерактивная зона JS */
+        .playzone {
+            background: #2d2f36;
+            border-radius: 2rem;
+            padding: 2rem;
+            margin: 2rem 0 3rem;
+            color: #f0f3f8;
+            box-shadow: 0 15px 30px -12px black;
+        }
+
+        .playzone h3 {
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .js-demo-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .js-card {
+            background: #1e1f24;
+            border-radius: 1.5rem;
+            padding: 1.4rem;
+            flex: 1;
+            min-width: 200px;
+            transition: all 0.2s;
+        }
+
+        button {
+            background: #f7df1e;
+            border: none;
+            color: #1e1f24;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 40px;
+            margin-top: 12px;
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 0.9rem;
+            transition: transform 0.1s, background 0.2s;
+        }
+
+        button:hover {
+            background: #ffea70;
+            transform: scale(0.97);
+        }
+
+        .counter-box, .color-box, .todo-input-area {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .color-preview {
+            width: 100%;
+            height: 60px;
+            border-radius: 16px;
+            background: #3b82f6;
+            margin-top: 8px;
+            transition: background 0.2s;
+            border: 1px solid white;
+        }
+
+        input {
+            padding: 8px 12px;
+            border-radius: 40px;
+            border: none;
+            font-family: monospace;
+        }
+
+        .todo-list {
+            margin-top: 12px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .todo-list li {
+            background: #2a2c35;
+            margin: 6px 0;
+            padding: 6px 12px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .del-btn {
+            background: #dc2626;
+            color: white;
+            padding: 2px 12px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border-color: #ffffff30;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.85rem;
+            color: #4b6f8c;
+        }
+        @media (max-width: 700px) {
+            body { padding: 1rem; }
+            .hero h1 { font-size: 2rem; }
+        }
